@@ -1,6 +1,6 @@
 import express from 'express';
 import appRouter from './app.router';
-import securityRouter from '../security/security.router';
+import securityRouter from './security/security.router';
 
 const app = express();
 
