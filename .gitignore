@@ -4,5 +4,9 @@
 node_modules
 
 bin
+coverage
+logs
+uploads/
+!uploads/.gitkeep
 
 .env

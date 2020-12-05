@@ -8,6 +8,7 @@ import appRouter from './app.router';
 import cookieSession from 'cookie-session';
 import config from './core/config';
 import security from './security/security';
+import csrfMiddleware from './security/csrf/csrf.middleware';
 
 const app = express();
 
@@ -16,10 +17,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(cookieSession({ secret: config.secret }));
-app.use(security.session());
 app.use(security.initialize());
+app.use(security.session());
 app.use(csurf());
 
+app.use(csrfMiddleware);
+app.use(express.static('bin/public'));
 app.use('/api/security', securityRouter);
 app.use(appRouter);
 

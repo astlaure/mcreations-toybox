@@ -9,8 +9,8 @@ const databaseConfig: { [x: string]: Options } = {
   development: {
     host: process.env.DATABASE_HOST,
     database: process.env.DATABASE_NAME,
-    username: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASS,
+    username: process.env.DATABASE_USERNAME,
+    password: process.env.DATABASE_PASSWORD,
     dialect: 'mysql',
     pool: {
       min: 2,
@@ -20,8 +20,8 @@ const databaseConfig: { [x: string]: Options } = {
   production: {
     host: process.env.DATABASE_HOST,
     database: process.env.DATABASE_NAME,
-    username: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASS,
+    username: process.env.DATABASE_USERNAME,
+    password: process.env.DATABASE_PASSWORD,
     dialect: 'mysql',
     pool: {
       min: 2,
