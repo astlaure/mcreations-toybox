@@ -100,12 +100,26 @@ module.exports = {
     {
       name: "React",
       testEnvironment: "jsdom",
-      rootDir: "./test/client",
+      rootDir: ".",
+      preset: "ts-jest",
+      testMatch: [
+        "<rootDir>/test/client/**/*.[jt]s?(x)",
+        "<rootDir>/test/client/**/?(*.)+(spec|test).[tj]s?(x)"
+      ],
     },
     {
       name: "Express",
       testEnvironment: "node",
-      rootDir: "./test/server",
+      rootDir: ".",
+      preset: "ts-jest",
+      testMatch: [
+        "<rootDir>/test/server/**/*.[jt]s?(x)",
+        "<rootDir>/test/server/**/?(*.)+(spec|test).[tj]s?(x)"
+      ],
+      moduleDirectories: [
+        "node_modules",
+        "src/server"
+      ],
     }
   ],
 

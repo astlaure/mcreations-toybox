@@ -22,14 +22,28 @@ User.init({
     type: DataTypes.STRING(64),
     allowNull: false,
     unique: true,
+    validate: {
+      min: 8,
+      max: 64,
+      notNull: true,
+    }
   },
   password: {
     type: DataTypes.STRING(64),
     allowNull: false,
+    validate: {
+      min: 8,
+      max: 64,
+      notNull: true,
+    }
   },
   email: {
     type: DataTypes.STRING(120),
     allowNull: false,
+    validate: {
+      isEmail: true,
+      notNull: true,
+    }
   },
   enabled: {
     type: DataTypes.BOOLEAN,
