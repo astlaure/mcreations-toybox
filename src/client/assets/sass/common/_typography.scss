@@ -1,0 +1,27 @@
+$color-primary: #E85F4F !default;
+$text-color: #333333 !default;
+
+body {
+  color: $text-color;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input {
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: $color-primary;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4rem;
+}

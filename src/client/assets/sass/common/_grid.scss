@@ -1,0 +1,40 @@
+.row {
+  display: flex;
+
+  &.center {
+    justify-content: center;
+  }
+
+  .col {
+    box-sizing: border-box;
+    width: calc(100% / 12 * 12);
+  }
+
+  .mobile-2 {
+    width: calc(100% / 12 * 2);
+  }
+
+  .tablet-2 {
+    @media screen and (min-width: 764px) {
+      width: calc(100% / 12 * 2);
+    }
+  }
+
+  .tablet-4 {
+    @media screen and (min-width: 764px) {
+      width: calc(100% / 12 * 4);
+    }
+  }
+
+  .tablet-6 {
+    @media screen and (min-width: 764px) {
+      width: calc(100% / 12 * 6);
+    }
+  }
+
+  .desktop-2 {
+    @media screen and (min-width: 1024px) {
+      width: calc(100% / 12 * 2);
+    }
+  }
+}

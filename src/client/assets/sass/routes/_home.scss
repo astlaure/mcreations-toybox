@@ -1,0 +1,19 @@
+.home-component {
+  height: 100%;
+
+  .title {
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .background {
+    height: calc(100% - 7rem);
+    margin-top: 2rem;
+    background-image: url("../../images/chess-piece.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

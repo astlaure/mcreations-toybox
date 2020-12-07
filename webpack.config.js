@@ -19,7 +19,21 @@ const clientConfig = {
   module: {
     rules: [
       { test: /\.tsx?$/, use: 'ts-loader' },
-      { test: /\.s?css$/, use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'] },
+      { test: /\.s?css$/, use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'resolve-url-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              // sourceMapContents: false
+            }
+          }
+        ],
+      },
+      { test: /\.(png|svg|jpe?g|gif)$/, use: 'file-loader' },
     ]
   },
   plugins: [

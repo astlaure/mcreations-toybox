@@ -1,0 +1,41 @@
+nav {
+  &.navbar {
+    height: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 60%;
+      border: 1px solid #E5E5E5;
+      position: absolute;
+      bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+    }
+
+    .navbar-content {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nav-brand a {
+      font-size: 1.5rem;
+    }
+
+    .nav-menu {
+      display: flex;
+
+      .nav-item {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+}
